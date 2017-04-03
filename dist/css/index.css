@@ -82,7 +82,7 @@ body {
   overflow: hidden;
 }
 .music-container .music-controllers .show-timer .progress .current-time {
-  width: 10%;
+  width: 0%;
   height: 100%;
   border-radius: 10px;
   background: #fff;
@@ -110,6 +110,7 @@ body {
   justify-content: center;
   align-items: center;
   border-right: 1px solid #f0f3f5;
+  cursor: pointer;
 }
 .music-container .music-buttons li:last-child {
   border: none;
@@ -121,7 +122,6 @@ body {
   color: #fff;
 }
 .music-container .music-buttons li .iconfont {
-  cursor: pointer;
   color: #d0d6df;
   font-size: 1.8em;
 }
@@ -130,6 +130,23 @@ body {
 }
 .music-container .music-lyr {
   height: 194px;
+  overflow: hidden;
   display: flex;
   justify-content: center;
+}
+.music-container .music-lyr .lyric {
+  position: relative;
+  transition: all 1s;
+}
+.music-container .music-lyr .lyric li {
+  padding: 5px 0 2px 0;
+  position: relative;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  transition: all 1s;
+}
+.music-container .music-lyr .lyric li.active {
+  font-size: 13px;
+  color: #000;
 }

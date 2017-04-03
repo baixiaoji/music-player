@@ -83,7 +83,7 @@ body{
                 cursor:pointer;
                 overflow: hidden;
                 .current-time{
-                    width:10%;
+                    width:0%;
                     height:100%;
                     border-radius: 10px;
                     background: #fff;
@@ -110,6 +110,7 @@ body{
             flex: 1;
             .center;
             border-right:1px solid #f0f3f5;
+            cursor: pointer;
             &:last-child{
                 border:none;
             }
@@ -120,7 +121,6 @@ body{
                 }
             }
             .iconfont{
-                cursor: pointer;
                 color:@tabsButtonColor;
                 font-size: 1.8em;
             }
@@ -132,6 +132,27 @@ body{
     
     .music-lyr{
         height:194px;
+        overflow: hidden;
         .row-center;
+        .lyric{
+            position: relative;
+            transition: all 1s;
+        }
+        .lyric li{
+            padding: 5px 0 2px 0;
+            position: relative;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 12px;
+            transition: all 1s;
+            // &:nth-child(2){
+            //     font-size: 30px;
+            //     // color:#20c196;
+            // }
+            &.active{
+                font-size: 13px;
+                color:#000;
+            }
+        }
     }
 }
